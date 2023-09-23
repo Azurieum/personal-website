@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(204, 228, 250);
+}
+
+.herosection {
+    color:aliceblue;
+    min-height: 800px;
+    background-color: #4b6f9b
+}
+
+.sectionsize {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px;
+    padding: 100px 15vw;
+}
+
+.container {
+    float: right;
+    display: flex; 
+    flex-direction: row;
+}
+
+.container > topnav {
+    background-color: rgb(50, 72, 90);
+    text-align: center;
+    line-height: 65px;
+    font-size: 28px;
+    border-radius:8%;
+    width: 110px;
+    margin: 15px;
+}
+
