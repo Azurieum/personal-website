@@ -1,2 +1,2 @@
-# personal-projects
-This is where I put all the projects i've done so far. Feel free to use anything here I don't mind.
+# personal-website
+This is where I track the progress of my personal website im building, I hope to maintain this website til the day I retire. It could be like a personal portfolio for projects or apps i've built.
