@@ -1,6 +1,15 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&family=Red+Hat+Text:ital,wght@0,400;1,500&display=swap');
+
+* {
     margin: 0;
     box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    transition-duration: .4s;
+    scroll-padding: 0rem;
 }
 
 body {
@@ -10,41 +19,80 @@ body {
 
 li {
     list-style-type: none;
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: rgb(204, 228, 250);
+    border-color: rgb(118, 187, 230);
+    color: rgb(247, 248, 248);
 }
 
-.herosection {
-    color:aliceblue;
-    min-height: 800px;
-    background-color: #4b6f9b
-}
-
-.sectionsize {
+.sectionSize {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 800px;
+    min-height: 900px;
     padding: 100px 15vw;
 }
 
-.container {
-    float: right;
+#herosection {
+    color:aliceblue;
+    min-height: 900px;
+    background-color: rgb(17, 17, 17);
+}
+
+#container {
+    position: fixed;
+    right: 0.5%;
     display: flex; 
     flex-direction: row;
+    z-index: 1;
 }
 
-.container > topnav {
-    background-color: rgb(50, 72, 90);
+#container > topnav {
+    border: 1px solid rgb(118, 187, 230);
+    background: linear-gradient(320deg,rgb(128, 186, 252),rgb(90, 133, 182));
+    background-size: 400%;
     text-align: center;
-    line-height: 65px;
-    font-size: 28px;
-    border-radius:8%;
-    width: 110px;
-    margin: 15px;
+    line-height: 45px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 120px;
+    margin: 7px;
+    
+    cursor: pointer;   
+    transition: transform 0.3s;
 }
 
+/* WORK ON MAKING IT BORDERED AND NOT FILLED, AND MAKE THE TRANSITION LOOK BETTER LIKE SOME GRADIENT EFFECT,
+ALSO TRY TO MAKE IT LIKE DISSAPEAR WHEN YOU SCROLL DOWN THAT MIGHT LOOK CLEAN.
+*/
+
+#container > topnav :hover {
+    transform: scale(120%);
+    
+}
+
+
+/* GIVE THIS A ANIMATION TO APPEAR WHEN SCROLLING DOWN */
+.topBTN {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-style: none;
+    background-color: rgb(118, 187, 230);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topBTN:hover {
+    background-color: rgb(100, 158, 194);
+}
