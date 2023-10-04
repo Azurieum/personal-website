@@ -14,6 +14,3 @@ function checkY(){
 function topButtonPress() {
     window.scrollTo(0,0)
 }
-
-
-

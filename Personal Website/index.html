@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
+        <title>Personal Website</title>
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://fonts.google.com/specimen/Mooli?preview.text=about&preview.text_type=custom">
         <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+        <!-- fonts -->
+        <style> @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500&display=swap');</style>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');</style>
     </head>
 
     <body>
@@ -16,29 +19,45 @@
             work on this to make it look better, this looks terrible currently.
             (future: try to give it a animation instead of it immedietely teleporting)
             -->
-        
-        <main>
-            <topnav id="container">
-            <topnav><li><a href="#aboutme"><b>About</b></a></li></topnav>
-            <topnav><li><a href="#goals"><b>Goals</b></a></li></topnav>
-            <topnav><li><a href ="#projects_section"><b>Projects</b></a></li></topnav>
+            <div class = "topBar">
+            <topnav id = "navcontainer">
+
+                <a href = "https://github.com/Azurieum"> 
+                    <img src = "https://cdn.discordapp.com/attachments/764640286730747975/1157076441855438898/github-mark-white.png" alt="My Github" class="GithubPhoto">
+                </a>
+                <a href = "https://www.linkedin.com/in/matthew-mei-915a96293"> 
+                    <img src = "https://cdn.discordapp.com/attachments/764640286730747975/1157518161583816784/White-Linkdn_Logo.png" alt="My Github" class="LinkdnPhoto">
+                </a>
+
+                <topnav style="margin-left: auto;"><a href="#aboutme" ><b>About</b></a></topnav>
+                <topnav><a href="#goals"><b>Goals</b></a></topnav>
+                <topnav><a href ="#projects_section"><b>Projects</b></a></topnav>
             </topnav>
+            </div>
+
+        <main>
              <!-- MAIN SECTION, this is where everything is going to be. This also looks terrible 
             give it a more modern look to it or some detail at least, circles and curves look amazing look into that.
          -->
-            <section id = "herosection">
-                <h1>testing</h1>
-                <p></p>
+            <section class="mainSectionSize" id="herosection" >
+                <h1>Matthew Mei</h1>
+                <h2>
+                    Currently a highschooler at Chelmsford High School. 
+                    <br> 
+                    Looking to pursue a career in <bold style="color: #314CBC;">Computer Science</bold>. 
+                </h2>
+                    
+                
             </section>
-            <section class="sectionSize", style="background-color: rgb(17, 17, 17);", id="aboutme">
+            <section class="mainSectionSize" id="aboutme">
                 <h1>About me section</h1>
                 <p></p>
             </section>
-            <section class="sectionSize", style="background-color: rgb(17, 17, 17);", id="goals">
+            <section class="mainSectionSize" id="goals">
                 <h1>Goals</h1>
                 <p></p>
             </section>
-            <section class="sectionSize", style="background-color: rgb(17, 17, 17)", id = "projects_section">
+            <section class="mainSectionSize" id = "projects_section">
                 <h1>Projects</h1>
                 <p></p>
             </section>

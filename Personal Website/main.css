@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&family=Red+Hat+Text:ital,wght@0,400;1,500&display=swap');
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -17,67 +15,42 @@ body {
     min-height: 100vh;
 }
 
-li {
-    list-style-type: none;
-    font-family: 'Overpass', sans-serif;
-    font-family: 'Red Hat Text', sans-serif;
-}
+
 
 a {
     text-decoration: none;
-    border-color: rgb(118, 187, 230);
     color: rgb(247, 248, 248);
 }
 
-.sectionSize {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.mainSectionSize {
     min-height: 900px;
     padding: 100px 15vw;
-}
-
-#herosection {
-    color:aliceblue;
-    min-height: 900px;
     background-color: rgb(17, 17, 17);
 }
 
-#container {
-    position: fixed;
+
+#navcontainer {
+    position: relative;
     right: 0.5%;
     display: flex; 
     flex-direction: row;
-    z-index: 1;
 }
 
-#container > topnav {
-    border: 1px solid rgb(118, 187, 230);
-    background: linear-gradient(320deg,rgb(128, 186, 252),rgb(90, 133, 182));
-    background-size: 400%;
+#navcontainer > topnav {
+    background: #314CBC;
     text-align: center;
     line-height: 45px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 120px;
-    margin: 7px;
+    margin: 15px;
+    font-family: 'Bricolage Grotesque', sans-serif;
     
     cursor: pointer;   
     transition: transform 0.3s;
 }
 
-/* WORK ON MAKING IT BORDERED AND NOT FILLED, AND MAKE THE TRANSITION LOOK BETTER LIKE SOME GRADIENT EFFECT,
-ALSO TRY TO MAKE IT LIKE DISSAPEAR WHEN YOU SCROLL DOWN THAT MIGHT LOOK CLEAN.
-*/
 
-#container > topnav :hover {
-    transform: scale(120%);
-    
-}
-
-
-/* GIVE THIS A ANIMATION TO APPEAR WHEN SCROLLING DOWN */
 .topBTN {
     position: fixed;
     bottom: 20px;
@@ -86,7 +59,7 @@ ALSO TRY TO MAKE IT LIKE DISSAPEAR WHEN YOU SCROLL DOWN THAT MIGHT LOOK CLEAN.
     width: 50px;
     border-radius: 50%;
     border-style: none;
-    background-color: rgb(118, 187, 230);
+    background-color: #ffffff;
     display: none;
     justify-content: center;
     align-items: center;
@@ -94,5 +67,40 @@ ALSO TRY TO MAKE IT LIKE DISSAPEAR WHEN YOU SCROLL DOWN THAT MIGHT LOOK CLEAN.
 }
 
 .topBTN:hover {
-    background-color: rgb(100, 158, 194);
+    background-color: #e7ebf7;
+}
+
+.GithubPhoto {
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: rgb(17, 17, 17);
+}
+
+.LinkdnPhoto {
+    height: 35px;
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: rgb(17, 17, 17);
+}
+
+.topBar {
+    background-color: rgb(17, 17, 17);
+}
+
+#herosection > h1 {
+    color: aliceblue;
+    font-size: 128px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    margin-top: 80px;
+}
+
+#herosection > h2 {
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
