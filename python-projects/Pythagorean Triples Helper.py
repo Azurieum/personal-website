@@ -44,10 +44,10 @@ while True:
 # This creates a function that checks if the input is either n or y and if it matches the given character for x then the user is correct and their score increases.
 def check(x):
     if input() == x:
-            print ("You got it correct, CONGRATULATIONS!")
+            print ("It is a Pythagorean triple CONGRATS!")
             score[0] = score[0] + 1
     else:
-        print("That is wrong, damn.")
+        print("It is not a Pythagorean triple. ):")
         score[1] = score[1] + 1
     print("")
 
