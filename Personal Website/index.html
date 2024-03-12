@@ -14,24 +14,23 @@
     </head>
 
     <body>
-        <script src="main.js"></script>
             <!-- Navigation bar to each part of the website.
             work on this to make it look better, this looks terrible currently.
             (future: try to give it a animation instead of it immedietely teleporting)
             -->
             <div class = "topBar">
             <topnav id = "navcontainer">
-
+                <!-- Photos Are broken discord removed them.-->
                 <a href = "https://github.com/Azurieum"> 
                     <img src = "https://cdn.discordapp.com/attachments/764640286730747975/1157076441855438898/github-mark-white.png" alt="My Github" class="GithubPhoto">
                 </a>
                 <a href = "https://www.linkedin.com/in/matthew-mei-915a96293"> 
-                    <img src = "https://cdn.discordapp.com/attachments/764640286730747975/1157518161583816784/White-Linkdn_Logo.png" alt="My Github" class="LinkdnPhoto">
+                    <img src = "https://cdn.discordapp.com/attachments/764640286730747975/1157518161583816784/White-Linkdn_Logo.png" alt="My Linkdn" class="LinkdnPhoto">
                 </a>
 
-                <topnav style="margin-left: auto;"><a href="#aboutme" ><b>About</b></a></topnav>
-                <topnav><a href="#goals"><b>Goals</b></a></topnav>
-                <topnav><a href ="#projects_section"><b>Projects</b></a></topnav>
+                <topnav style="margin-left: auto;"><a href="#aboutMe" ><b>About</b></a></topnav>
+                <topnav><a href ="#Projects"><b>Projects</b></a></topnav>
+                <topnav><a href="#extraInformation"><b>Extras</b></a></topnav>
             </topnav>
             </div>
 
@@ -46,25 +45,41 @@
                     <br> 
                     Looking to pursue a career in <bold style="color: #314CBC;">Computer Science</bold>. 
                 </h2>
-                    
-                
+                <div class="timer">
+                    <span id="timerTextYears">placeholder</span><br>
+                    <span id="timerTextDays">placeholder</span><br>
+                    <span id="timerTextHours">placeholder</span><br>
+                    <span id="timerTextMinutes">placeholder</span><br>
+                    <span id="timerTextSeconds">placeholder</span><br>
+                    <h1 id = "graduationText">Graduation 📣</h1>
+                </div>
             </section>
-            <section class="mainSectionSize" id="aboutme">
-                <h1>About me section</h1>
-                <p></p>
+            
+
+            <!-- About Me-->
+            <section class="mainSectionSize" id="aboutMe">
+                <h1>About me</h1>
+                <p>Hello! I'm Matthew welcome to my website. I currently a highschooler learning about Computer Science and Programming at Chelmsford Highschool. </p>
             </section>
-            <section class="mainSectionSize" id="goals">
-                <h1>Goals</h1>
-                <p></p>
-            </section>
-            <section class="mainSectionSize" id = "projects_section">
+
+            <!-- Personal Projects-->
+            <section class="mainSectionSize" id="Projects">
                 <h1>Projects</h1>
                 <p></p>
             </section>
+
+
+            <!-- Extra Information -->
+            <section class="mainSectionSize" id = "extraInformation">
+                <h1>Stats</h1>
+                <p></p>
+            </section>
+
             <!--Button to scroll to the top of the screen when pressed.-->
             <button class ="topBTN", onclick="topButtonPress()">
                 <span class="material-icons md-48">arrow_upward</span>
             </button>
         </main>
     </body>
+    <script src="main.js"></script>
 </html>
