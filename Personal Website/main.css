@@ -1,106 +1,66 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+// Everytime the page is scrolled the Y value is checked.
+window.addEventListener("scroll", checkY)
+
+// If the Y value is above 200 the scroll to top button will show. Else it would be hidden.
+function checkY(){
+    if (window.scrollY > 200) {
+        document.querySelector(".topBTN").style.display = "flex"
+    } else {
+        document.querySelector(".topBTN").style.display = "none"
+    }
 }
 
-
-html {
-    scroll-behavior: smooth;
-    transition-duration: .4s;
-    scroll-padding: 0rem;
+// When the button is pressed it scrolls to the top of the page.
+function topButtonPress() {
+    window.scrollTo(0,0)
 }
 
-body {
-    width: 100%;
-    min-height: 100vh;
-}
-
-
-
-a {
-    text-decoration: none;
-    color: rgb(247, 248, 248);
-}
-
-.mainSectionSize {
-    min-height: 900px;
-    padding: 100px 15vw;
-    background-color: rgb(17, 17, 17);
-}
-
-
-#navcontainer {
-    position: relative;
-    right: 0.5%;
-    display: flex; 
-    flex-direction: row;
-}
-
-#navcontainer > topnav {
-    background: #314CBC;
-    text-align: center;
-    line-height: 45px;
-    font-size: 18px;
-    border-radius: 8px;
-    width: 120px;
-    margin: 15px;
-    font-family: 'Bricolage Grotesque', sans-serif;
+function getTimeRemaining() {
+    // Target date: June 1, 2025, 00:00:00 in milliseconds
+    const targetDate = new Date('2025-06-01T00:00:00').getTime();
     
-    cursor: pointer;   
-    transition: transform 0.3s;
+    // Current date in milliseconds
+    const currentDate = Date.now();
+
+    // Calculate the time difference in milliseconds
+    let timeDifference = targetDate - currentDate;
+
+    /* add later
+    if (timeDifference < 0) {
+        
+    } 
+    */
+
+    // Convert milliseconds to seconds
+    timeDifference = Math.floor(timeDifference / 1000);
+
+    // Calculate years, days, hours, minutes, and seconds
+    const years = Math.floor(timeDifference / (365 * 24 * 60 * 60));
+    timeDifference -= years * (365 * 24 * 60 * 60);
+
+    const days = Math.floor(timeDifference / (24 * 60 * 60));
+    timeDifference -= days * (24 * 60 * 60);
+
+    const hours = Math.floor(timeDifference / (60 * 60));
+    timeDifference -= hours * (60 * 60);
+
+    const minutes = Math.floor(timeDifference / 60);
+    timeDifference -= minutes * 60;
+
+    const seconds = timeDifference;
+
+    // Pad numbers with leading zeros if they are less than 10
+    const paddedHours = hours < 10 ? `0${hours}` : hours;
+    const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+    document.getElementById("timerTextYears").textContent = `${years} Years`;
+    document.getElementById("timerTextDays").textContent = `${days} Days`;
+    document.getElementById("timerTextHours").textContent = `${paddedHours} Hours`;
+    document.getElementById("timerTextMinutes").textContent = `${paddedMinutes} Minutes`;
+    document.getElementById("timerTextSeconds").textContent = `${paddedSeconds} Seconds`;
+
 }
 
 
-.topBTN {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border-style: none;
-    background-color: #ffffff;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.topBTN:hover {
-    background-color: #e7ebf7;
-}
-
-.GithubPhoto {
-    height: 35px;
-    width: 35px;
-    margin-left: 20px;
-    margin-top: 15px;
-    background-color: rgb(17, 17, 17);
-}
-
-.LinkdnPhoto {
-    height: 35px;
-    width: 45px;
-    margin-left: 20px;
-    margin-top: 15px;
-    background-color: rgb(17, 17, 17);
-}
-
-.topBar {
-    background-color: rgb(17, 17, 17);
-}
-
-#herosection > h1 {
-    color: aliceblue;
-    font-size: 128px;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    margin-top: 80px;
-}
-
-#herosection > h2 {
-    color: aliceblue;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+setInterval(getTimeRemaining, 1000);
